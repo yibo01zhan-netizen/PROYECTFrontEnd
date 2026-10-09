@@ -9,22 +9,22 @@ export class ProductServices {
     private urlBase = environment.apiUrl;
 
     GetProducts(){
-        return this.httpClient.get<Product[]>(this.urlBase + 'GetProductos')
+        return this.httpClient.get<Product[]>(this.urlBase + 'Producto/GetProductos')
     }
 
     CreateProduct(item : Product){
-        return this.httpClient.post(this.urlBase + 'CreateProducto', item, { responseType: 'text'})
+        return this.httpClient.post(this.urlBase + 'Producto/CreateProducto', item, { responseType: 'text'})
     }
 
     DeleteProduct(id : number){
-    return this.httpClient.delete(this.urlBase + 'DeleteProducto/' + id, {responseType: 'text'})
+    return this.httpClient.delete(this.urlBase + 'Producto/DeleteProducto/' + id, {responseType: 'text'})
     }
 
     UpdateProduct(item : Product){
-        return this.httpClient.put(this.urlBase + 'UpdateProducto/' + item.id, item, {responseType: 'text'})
+        return this.httpClient.put(this.urlBase + 'Producto/UpdateProducto/' + item.id, item, {responseType: 'text'})
     }
 
     GetProduct(id : number){
-        return this.httpClient.get<Product>(this.urlBase + 'GetProducto/' + id)
+        return this.httpClient.get<Product>(this.urlBase + 'Producto/GetProducto/' + id)
     }
 }

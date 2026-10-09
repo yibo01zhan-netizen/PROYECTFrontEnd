@@ -1,9 +1,8 @@
 import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { ProductServices } from '../../Services/product-services';
 import { Product } from '../../Models/Product';
-import { response, Router } from 'express';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   imports: [FormsModule],

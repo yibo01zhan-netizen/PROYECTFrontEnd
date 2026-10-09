@@ -17,13 +17,13 @@
       <h3 class="mb-2 fw-bold">Crear cuenta</h3>
       <p class="text-muted mb-4 small">Completa la información para registrarte</p>
       
-      <form>
+      <form (ngSubmit)="Register()">
         <!-- 1. Nombre -->
         <div class="mb-3">
           <label class="form-label text-dark fw-medium small">Nombre completo</label>
           <div class="input-group">
             <span class="input-group-text bg-light border-end-0"><i class="bi bi-person"></i></span>
-            <input type="text" class="form-control bg-light border-start-0" placeholder="Tu nombre completo">
+            <input type="text" class="form-control bg-light border-start-0" placeholder="Tu nombre completo" name="nombre" [(ngModel)]="RegisterModel.nombre">
           </div>
         </div>
 
@@ -32,7 +32,7 @@
           <label class="form-label text-dark fw-medium small">Correo electrónico</label>
           <div class="input-group">
             <span class="input-group-text bg-light border-end-0"><i class="bi bi-envelope"></i></span>
-            <input type="email" class="form-control bg-light border-start-0" placeholder="tu@email.com">
+            <input type="email" class="form-control bg-light border-start-0" placeholder="tu@email.com" name="email" [(ngModel)]="RegisterModel.email">
           </div>
         </div>
         
@@ -41,29 +41,29 @@
           <label class="form-label text-dark fw-medium small">Contraseña</label>
           <div class="input-group">
             <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock"></i></span>
-            <input type="password" class="form-control bg-light border-start-0" placeholder="Crea tu contraseña">
+            <input type="password" class="form-control bg-light border-start-0" placeholder="Crea tu contraseña" name="password" [(ngModel)]="RegisterModel.password">
           </div>
         </div>
 
         <!-- 4. Confirmación de contraseña -->
-        <div class="mb-4">
+        <!-- <div class="mb-4">
           <label class="form-label text-dark fw-medium small">Confirmar contraseña</label>
           <div class="input-group">
             <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock"></i></span>
-            <input type="password" class="form-control bg-light border-start-0" placeholder="Repite tu contraseña">
+            <input type="password" class="form-control bg-light border-start-0" placeholder="Repite tu contraseña" name="Confirmación" [(ngModel)]="Confirmación">
           </div>
-        </div>
+        </div> -->
         
         <!-- 5. Botón Registrarse -->
-        <button type="button" class="btn btn-primary btn-lg w-100 mb-3 rounded-pill fw-bold">Registrarse</button>
+        <button type="submit" class="btn btn-primary btn-lg w-100 mb-3 rounded-pill fw-bold">Registrarse</button>
       </form>
       
       <!-- Navegación de regreso al Login -->
-      <div class="text-center">
+      <!-- <div class="text-center">
         <span class="text-muted small">¿Ya tienes una cuenta? </span>
         <a routerLink="/login" class="text-primary text-decoration-none fw-bold small">Inicia sesión</a>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </div>
